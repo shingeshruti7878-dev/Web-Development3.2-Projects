@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LearnHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📚 LearnHub</h1>
+</header>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Courses</h3>
+        <ul>
+            <li onclick="loadLesson(0)">HTML Basics</li>
+            <li onclick="loadLesson(1)">CSS Basics</li>
+            <li onclick="loadLesson(2)">JavaScript Intro</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2 id="lessonTitle">Select a Lesson</h2>
+
+        <!-- Video -->
+        <video id="videoPlayer" controls width="500"></video>
+
+        <!-- Quiz -->
+        <div id="quizBox">
+            <h3 id="question"></h3>
+            <div id="options"></div>
+            <button onclick="submitQuiz()">Submit Answer</button>
+            <p id="quizResult"></p>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress">
+            <h3>Your Progress</h3>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+            <p id="progressText">0% Completed</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
